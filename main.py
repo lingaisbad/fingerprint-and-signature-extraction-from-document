@@ -50,6 +50,8 @@ x,y,w,h = cv2.boundingRect(cnts)
 cv2.rectangle(image, (x, y), (x + w, y + h), (36,255,12), 2)
 ROI = result[y:y+h, x:x+w]
 plt.imsave('/content/new1.png',mask)
+
+
 #fingerprint
 import cv2
 from PIL import ImageOps
@@ -84,6 +86,8 @@ img2 = cv2.imread('pre_version.png',cv2.IMREAD_GRAYSCALE)
 img2 = cv2.threshold(img2, 50, 250, cv2.THRESH_BINARY_INV)[1]
 cv2_imshow(img2)
 plt.imsave('/content/fingerprints.png',img2) 
+
+
 #signature
 import cv2
 from google.colab.patches import cv2_imshow
